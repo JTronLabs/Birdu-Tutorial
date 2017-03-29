@@ -26,7 +26,7 @@ export default class Enemy extends Phaser.Sprite {
 
     //create all animations at construction (when preallocated in the Pools) to avoid perf hit at run time
     for (var i = 0; i < Enemy.maxBirdFrame; i++) {
-      const animationFrames = Enemy.getFlyingFrames(i, this.game);
+      const animationFrames = Enemy.getFlyingFrames(i);
       this.animations.add(Enemy.birdFrameName(i), animationFrames, Enemy.flapFPS * (animationFrames.length / 4), true);
     }
 
@@ -88,7 +88,7 @@ export default class Enemy extends Phaser.Sprite {
   //given a bird's sprite number, create an array with all its frame names.
   //Some bird animations have 2 frames, the rest have 4
   //example: Enemy.getFlyingFrames(10,game) returns ["b10-1","b10-2","b10-3","b10-4"]
-  static getFlyingFrames(spriteNum, game) {
+  static getFlyingFrames(spriteNum) {
     const numFrames = (Enemy.twoFrameAnimations.includes(spriteNum)) ? 2 : 4;
 
     var frameNames = [];

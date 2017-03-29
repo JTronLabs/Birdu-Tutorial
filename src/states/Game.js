@@ -63,7 +63,7 @@ export default class Game extends Phaser.State {
   }
 
   static enemyCollision(player, enemy) { //groups are second
-    this.showCrumbs(player.x, player.y, player.width, player.height)
+    this.showCrumbs(player.x, player.y, player.width, player.height);
     const enemyArea = Math.abs(enemy.width * enemy.height);
     const playerArea = Math.abs(player.width * player.height);
 

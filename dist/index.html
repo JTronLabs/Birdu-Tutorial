@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Birdu</title>
+  <meta name="description" content="Birdu game as it appears at the end of the tutorial on jtronlabs.com">
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      background: #000;
+      overflow: hidden;
+      -ms-touch-action: none;
+      touch-action: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  </style>
+  <!-- Preload TTF fonts, stylize google sign-in -->
+  <style>
+    @font-face {
+      font-family: "papercuts";
+      src: url('./assets/fonts/papercuts-2.ttf') format("truetype");
+    }
+
+    .hide {
+      background-color: black;
+      height: 0;
+    }
+
+    .load-papercuts {
+      font-family: "papercuts";
+    }
+
+    .g-signin2 {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>--
+
+  <!--  This class is here to force .ttf fonts to load for the game (Phaser does not support generic .ttf loading)  -->
+  <p class="load-papercuts hide">Some text needed to pre-load font family</p>
+  <script src="phaser.min.js"></script>
+  <!-- NOTE: Add third-party library scripts here. -->
+  <script src="game.min.js"></script>
+  <script>
+    window.app.init()
+  </script>
+</body>
+
+</html>
